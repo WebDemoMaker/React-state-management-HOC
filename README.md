@@ -3,11 +3,11 @@
 
 Here is a summary of what and how we are going to implement it
 
-# Call the connect HOC and pass mapstatetoprops method & component name in it to read data in React components
+### Call the connect HOC and pass mapstatetoprops method & component name in it to read data in React components
 
-# Call the connect HOC and pass mapdispatchtoprops method(method name can differ, just follow a convention) & component name in it to read data in React components
+### Call the connect HOC and pass mapdispatchtoprops method(method name can differ, just follow a convention) & component name in it to read data in React components
 
-Put <Provider store={store}> around your entire <App> component so that other components can talk to the store
+Wrap your App component with Provider so that other components can talk to the store
 
 
 	
