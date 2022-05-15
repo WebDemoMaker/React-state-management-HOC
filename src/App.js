@@ -1,25 +1,42 @@
-import logo from './logo.svg';
 import './App.css';
+import Second from './Second';
+import Third from './Third';
+import {createStore} from 'redux';
+// lets create a central store to access that name property in both second & third component without passing it as props
+const initialState={name:"harsh"}
+// we need to pass initialState as state value in reducer
+const reducer = (state=initialState,action)=>{
+  console.log(state,action)
+  // now we can change the state value according to action type
+  // switch(action.type)
+  // {
+  //   case "CHAPRI":
+  //   return {...state,name:action.payload}
+  //   break
+  //   case "PLAYBOY":
+  //   return {...state,name:action.payload}
+  //   break
+  //   case "CHAPRI":
+  //   return {...state,name:action.payload}
+  //   break
 
-function App() {
+  // }
+  
+
+   return {...state,name:action.payload}
+}
+
+export const store = createStore(reducer)
+
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div> 
+
+    <Second/>
+    <Third/>
     </div>
   );
 }
+
 
 export default App;
